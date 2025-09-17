@@ -1,2 +1,4 @@
 .idea/
+.idea/misc.xml
 __pycache__/
+completion/.venv
