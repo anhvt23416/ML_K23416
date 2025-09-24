@@ -1,12 +1,22 @@
 from flask import Flask
 from flask_mysqldb import MySQL
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Lấy giá trị của API_KEY từ biến môi trường
+# os.getenv() là cách an toàn để đọc, nó sẽ trả về None nếu không tìm thấy
+
+pw=os.getenv("DB_PASS")
+print(pw)
 
 # 1. Khởi tạo ứng dụng Flask
 app = Flask(__name__)
 
 # 2. Cấu hình các thông số kết nối CSDL TRƯỚC
 app.config["MYSQL_USER"] = 'root'
-app.config["MYSQL_PASSWORD"] = 'Tru$t1nG0D'
+app.config["MYSQL_PASSWORD"] = pw
 app.config["MYSQL_DB"] = "Parks_and_Recreation"
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_PORT"] = 3306
