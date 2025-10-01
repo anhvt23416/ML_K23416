@@ -2,4 +2,6 @@
 .idea/misc.xml
 __pycache__/
 */.venv
+*/.env
 databases/
+*/databases/
