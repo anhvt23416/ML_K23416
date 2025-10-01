@@ -5,4 +5,4 @@ __pycache__/
 */.env
 databases/
 */databases/
-./blog/StudentManagement/_fullcode
+./blog/StudentManagement/_fullcode/
