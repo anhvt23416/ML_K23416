@@ -9,8 +9,6 @@ load_dotenv()
 # os.getenv() là cách an toàn để đọc, nó sẽ trả về None nếu không tìm thấy
 
 pw=os.getenv("DB_PASS")
-print(pw)
-
 # 1. Khởi tạo ứng dụng Flask
 app = Flask(__name__)
 
