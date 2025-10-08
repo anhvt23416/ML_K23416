@@ -1,4 +1,5 @@
-from retail_project.employee import Employee
+from retailproject.connectors.connector import Connector
+from retailproject.models.employee import Employee
 class EmployeeConnector(Connector):
     def login(self, email, password):
         sql="select * from employee where email=%s and password=%s;"
@@ -15,5 +16,5 @@ port=3306
 database="k23416_retail"
 user="root"
 password="Qw3rty^^"
-empconn = EmployeeConnector(server=host, port=port, database=database, user=user, password=password)
+empconn = EmployeeConnector(server=host, port=port, database=database, username=user, password=password)
 empconn.login(email="obama@gmail.com", password="123")
