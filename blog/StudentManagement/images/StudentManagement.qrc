@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>ic_delete.png</file>
+    <file>ic_logo.jpg</file>
+    <file>ic_new.png</file>
+    <file>ic_no_avatar.png</file>
+    <file>ic_save.png</file>
+    <file>ic_update.png</file>
+  </qresource>
+</RCC>
