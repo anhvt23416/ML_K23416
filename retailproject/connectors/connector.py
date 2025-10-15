@@ -2,7 +2,7 @@ import traceback
 import mysql.connector
 
 class Connector(object):
-    def __init__(self, server=None, port=None,database=None, username=None, password=None):
+    def __init__(self, server="localhost", port=3306, database="k23416_retail", username="root", password="Qw3rty^^"):
         self.server=server
         self.port=port
         self.database=database
@@ -72,4 +72,16 @@ class Connector(object):
             cursor.close()
             return dataset
         except:
+            traceback.print_exc()
+
+    def insert(self, sql, val):
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(sql, val)
+            self.conn.commit()
+            result=cursor.rowcount #return the affected row
+            cursor.close()
+            return result
+        except Exception as e:
+            print(e)
             traceback.print_exc()
