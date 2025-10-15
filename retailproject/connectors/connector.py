@@ -61,3 +61,15 @@ class Connector(object):
             return dataset
         except:
             traceback.print_exc()
+
+
+
+    def fetchall(self, sql, val):
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(sql,val)
+            dataset = cursor.fetchall()
+            cursor.close()
+            return dataset
+        except:
+            traceback.print_exc()
