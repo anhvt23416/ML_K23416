@@ -272,7 +272,7 @@
     <property name="title">
      <string>Actions</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButtonNew">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -294,7 +294,7 @@
       <string>New</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="pushButtonSave">
      <property name="geometry">
       <rect>
        <x>280</x>
@@ -316,7 +316,7 @@
       <string>Save</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="pushButtonUpdate">
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -338,7 +338,7 @@
       <string>Update</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="pushButtonDelete">
      <property name="geometry">
       <rect>
        <x>660</x>

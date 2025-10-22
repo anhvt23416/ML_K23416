@@ -74,7 +74,7 @@ class Connector(object):
         except:
             traceback.print_exc()
 
-    def insert(self, sql, val):
+    def insert_update_delete_one(self, sql, val):
         try:
             cursor = self.conn.cursor()
             cursor.execute(sql, val)

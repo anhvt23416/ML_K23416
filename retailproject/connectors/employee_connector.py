@@ -42,7 +42,26 @@ class EmployeeConnector(Connector):
             `Password`,\
             `IsDeleted`) values (%s,%s,%s,%s,%s,%s);"
         val=(emp.EmployeeCode, emp.Name,emp.Phone,emp.Email,emp.Password,emp.isDeleted)
-        result=self.insert(sql,val)
+        result=self.insert_update_delete_one(sql, val)
+        return result
+    def update_one_employee(self, emp):
+        sql="update employee set \
+        `EmployeeCode` =%s,\
+        `Name` = %s,\
+        `Phone` = %s,\
+        `Email` = %s,\
+        `Password` = %s,\
+        `IsDeleted` = %s\
+        WHERE\
+        `ID` = %s;"
+        val=(emp.EmployeeCode, emp.Name,emp.Phone,emp.Email,emp.Password,emp.isDeleted, emp.ID)
+        result=self.insert_update_delete_one(sql, val)
+        return result
+
+    def delete_one_employee(self, emp):
+        sql="delete from employee WHERE ID = %s;"
+        val=(emp.ID,) #must have a trailing comma when only 1 input
+        result=self.insert_update_delete_one(sql, val)
         return result
 
 # host="localhost"
